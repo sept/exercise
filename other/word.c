@@ -1,15 +1,14 @@
 #include<stdio.h>
+char b[20];
 int sentenc(char a[])
 {
     char *p = NULL;
-    int b[20] = 0;
     int i = 0;
     int j = 0;
     p = a;
 
     while (*p == ' ')
     {
-        i++;
         p++;
     }
     while (*p != '\0')
@@ -19,8 +18,10 @@ int sentenc(char a[])
             b[j] += 1;
             p++;    
         }
+        printf("b[%d] = %c\n", j, b[j]);
         j++;
     }
+    printf("%s\n", b);
 }
 int main(int argc, const char *argv[])
 {
