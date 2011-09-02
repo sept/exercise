@@ -1,3 +1,6 @@
+/**********************************
+找出出入参数值中重复的数据并打印出
+*********************************/
 #include <stdio.h>
 #include <stdlib.h>
 int main (int argc, char *argv[])
@@ -8,17 +11,17 @@ int main (int argc, char *argv[])
         exit(-1);
     }
     char *ptr = argv[1];
-    int i = 0;
+    char *temp = argv[1];
 
-    for (i = 0; i < 10; i++)
+    for (; *temp != '\0' ; temp++)
     {
+        ptr = temp;
         while (*ptr != '\0')
         {
             ptr++;
-            printf("%d\n", *ptr);
-            if (*argv[i] == *ptr) 
+            if (*temp == *ptr) 
             {
-                printf("重复的有%d\n", *argv[i]);
+                printf("重复的有%c\n", *temp);
             }
         }
     }

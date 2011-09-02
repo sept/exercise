@@ -18,22 +18,9 @@ int main()
 #endif
 
 #if 0 
-
-#include<stdio.h>
-int main(int argc, const char *argv[])
-{
-    int i = 0;
-    int j = 0;
-    int a[10];
-
-    printf("\n");
-    return 0;
-}
-
-#endif
-
-#if 0 
-
+/*************************************
+判断 n! 后面 有几个零
+**************************************/
 #include <stdio.h>
 int main(int argc, char *argv[])
 {  
@@ -69,7 +56,9 @@ int main(int argc, const char *argv[])
 #endif
 
 #if 1
-
+/**************************************
+打印出 “*”组成的菱形
+****************************************/
 #include <stdio.h>
 
 int main()

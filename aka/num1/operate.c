@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/*******************************
+实现加减乘除运算
+********************************/
 int main (int argc, char *argv[])
 {
     if (argc != 3) 
