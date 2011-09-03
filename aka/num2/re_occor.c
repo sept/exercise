@@ -1,5 +1,5 @@
 /**********************************
-找出出入参数值中重复的数据并打印出
+找出输入参数值中重复的数据并打印出
 *********************************/
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,6 +15,10 @@ int main (int argc, char *argv[])
 
     for (; *temp != '\0' ; temp++)
     {
+        if (*temp == -1)
+        {
+            continue;
+        }    
         ptr = temp;
         while (*ptr != '\0')
         {
@@ -22,6 +26,7 @@ int main (int argc, char *argv[])
             if (*temp == *ptr) 
             {
                 printf("重复的有%c\n", *temp);
+                *ptr = -1;
             }
         }
     }
