@@ -37,7 +37,7 @@ int main(int argc, const char *argv[])
 #include<stdio.h>
 
 int b[52];
-char find_mstr(char a[])
+char find_mstr(char *a)
 {
     char *p;
     p = a;
@@ -62,11 +62,11 @@ char find_mstr(char a[])
     printf("%c出现次数最多为 %d次\n", ((char)mn + 'a'), temp);
     return 0;  
 }
-int main(int argc, const char *argv[])
+int main(int argc, char *argv[])
 {
-    char str[] = "banana";
-    printf("字符串为：%s\n", str);
-    find_mstr(str);
+ //   char str[] = "banana";
+    printf("字符串为：%s\n", argv[1]);
+    find_mstr(argv[1]);
     return 0;
 }
     
