@@ -45,18 +45,18 @@ int main(int argc, char *argv[])
 
 int judge_once(char *ptr)
 {
-    int buf[26] = {0};
+    int buf[100] = {0};
     char *str = ptr;
     
     while (*ptr != '\0')
     {
-        buf[*ptr - 'a'] += 1;
+        buf[*ptr - '0'] += 1;
         ptr++;
     }
     printf("*str = %c\n", *str);
     while (*str != '\0')
     {
-        if (buf[*str-'a'] == 1) 
+        if (buf[*str-'0'] == 1) 
         {
             printf("%c\n", *str);
             return 1;
